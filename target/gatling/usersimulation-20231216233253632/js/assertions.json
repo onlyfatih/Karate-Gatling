@@ -1,0 +1,10 @@
+{
+  "simulation": "performance.UserSimulation",
+  "simulationId": "usersimulation-20231216233253632",
+  "start": 1702769573931,
+  "description": "",
+  "scenarios": ["Get Booking"],
+  "assertions": [
+
+  ]
+}
