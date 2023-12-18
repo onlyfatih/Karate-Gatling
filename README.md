@@ -23,9 +23,11 @@ The project structure is organized as follows:
 
 To run the API tests, follow these steps:
 
-1- Open a terminal in the project directory.
-2- Run the following command to execute Karate tests:
-    -mvn test
+1. Open a terminal in the project directory.
+2. Run the following command to execute Karate tests:
+   ```
+   mvn test
+   ```
 
 ## Performance Tests
 
@@ -33,14 +35,16 @@ To run performance tests with Gatling, follow these steps:
 
 1- Open a terminal in the project directory.
 2- Run the following command to execute Gatling tests:
-    -mvn gatling:test
+   ```
+   mvn clean test-compile gatling:test
+   ```
 
 ## Important Files and Functions
 
-  createBookingCaller.feature: Contains the scenario for creating a new booking.
-  getBooking.feature: Includes the scenario for querying an existing booking.
-  deleteBooking.feature: Holds the scenario for deleting a booking.
-  UserSimulation.scala: Contains the Gatling scenario defining the performance tests.
+    createBookingCaller.feature: Contains the scenario for creating a new booking.
+    getBooking.feature: Includes the scenario for querying an existing booking.
+    deleteBooking.feature: Holds the scenario for deleting a booking.
+    UserSimulation.scala: Contains the Gatling scenario defining the performance tests.
 
 ## Environment Configuration and Variables
 
