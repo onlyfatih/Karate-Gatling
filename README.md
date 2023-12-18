@@ -33,8 +33,8 @@ To run the API tests, follow these steps:
 
 To run performance tests with Gatling, follow these steps:
 
-1- Open a terminal in the project directory.
-2- Run the following command to execute Gatling tests:
+1. Open a terminal in the project directory.
+2. Run the following command to execute Gatling tests:
    ```
    mvn clean test-compile gatling:test
    ```
