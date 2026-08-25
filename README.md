@@ -1,55 +1,62 @@
-# RESTful Booker API Test and Performance Project
+# API & Performance Testing with Karate + Gatling
 
-This project aims to test RESTful APIs obtained from the Restful Booker site using the Karate framework. Additionally, it includes performance testing using Gatling integration.
+A combined API functional and performance testing project built against the public **Restful Booker** API.
 
-<p align="center">
-  <img src="https://gatling.io/wp-content/uploads/2021/06/gatling-og.jpg" width="300" />
-</p>
+The repository demonstrates how reusable Karate API scenarios can be exercised both as functional tests and as part of **Gatling load simulations**.
 
-## Project Overview
+## Tech Stack
 
-This project combines the usage of Karate framework for API testing and Gatling for performance testing against the Restful Booker APIs.
+- Karate
+- Gatling
+- Scala
+- Maven
+- JUnit 5
 
-## Project Structure
+## Project Goals
 
-The project structure is organized as follows:
+- Validate REST API behavior with Karate
+- Reuse API flows inside performance simulations
+- Execute load scenarios with Gatling
+- Keep functional and performance test assets close to each other
+- Generate repeatable Maven-based test runs
 
-    caller: Contains Karate scenarios making API requests.
-    features: Holds Karate scenarios, each representing a specific API request.
-    performance: Includes Gatling scenarios for performance testing.
+## Structure
 
-## How to Run?
-## API Tests
+```text
+src/test/java
+├── caller         # Reusable API flows
+├── features       # Functional Karate scenarios
+└── performance    # Gatling simulations
+```
 
-To run the API tests, follow these steps:
+Representative flows include booking creation, retrieval and deletion, while the performance layer drives those API interactions under generated load.
 
-1. Open a terminal in the project directory.
-2. Run the following command to execute Karate tests:
-   ```
-   mvn test
-   ```
+## Run Functional API Tests
 
-## Performance Tests
+```bash
+mvn test
+```
 
-To run performance tests with Gatling, follow these steps:
+## Run Performance Tests
 
-1. Open a terminal in the project directory.
-2. Run the following command to execute Gatling tests:
-   ```
-   mvn clean test-compile gatling:test
-   ```
+```bash
+mvn clean test-compile gatling:test
+```
 
-## Important Files and Functions
+## Performance Engineering Perspective
 
-    createBookingCaller.feature: Contains the scenario for creating a new booking.
-    getBooking.feature: Includes the scenario for querying an existing booking.
-    deleteBooking.feature: Holds the scenario for deleting a booking.
-    UserSimulation.scala: Contains the Gatling scenario defining the performance tests.
+Performance testing is not only about generating requests. The useful output comes from analyzing how a service behaves as load increases: throughput, response-time distribution, error rate and the point at which the system begins to saturate.
 
-## Environment Configuration and Variables
+This project serves as a compact example of integrating an API test DSL with a dedicated load-generation tool.
 
-Environment settings and variables are configured using the fn() function through the Karate framework. This function handles defining the environment where the scenarios run and setting up necessary variables.
+## What This Project Demonstrates
 
-## Contributions
+- API functional testing with Karate
+- Gatling-based performance testing
+- Scenario reuse between functional and load tests
+- Maven-driven execution
+- Separation of functional scenarios and performance simulations
 
-This project is open to contributions. Feel free to contribute your enhancements or report issues by opening a pull request or issue.
+---
+
+**Focus:** API Testing • Performance Testing • Gatling • Karate • Load Simulation
